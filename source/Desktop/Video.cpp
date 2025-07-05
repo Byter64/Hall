@@ -299,6 +299,11 @@ void Hall::UpdateRaylibTexture(const Color* image, short width, short height)
 {
 	::UpdateTexture(textures[TextureID{(Color*)image, (unsigned short)width, (unsigned short)height}], image);
 }
+
+void Hall::RaylibSetTargetFramerate(int targetfps)
+{
+	::SetTargetFPS(targetfps);
+}
 #endif
 
 

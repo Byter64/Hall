@@ -121,6 +121,7 @@ namespace Hall
 
 #ifdef DESKTOP
 	void UpdateRaylibTexture(const Color* image, short width, short height);
+	void RaylibSetTargetFramerate(int targetfps);
 #endif
 
 	[[deprecated("This function misses a large amount of features and was depracted in favour of more modular setters. See the Hall::Set... functions in combination with Hall::Draw()")]]
