@@ -85,122 +85,122 @@ unsigned int Hall::GetSystemTimeExcerpt(int precision)
 #ifdef DESKTOP
 void Hall::SetCONT0_UP(KeyboardKey key)
 {
-	CONT0_UP = key;
+	CONT0_UP = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT0_DOWN(KeyboardKey key)
 {
-	CONT0_DOWN = key;
+	CONT0_DOWN = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT0_LEFT(KeyboardKey key)
 {
-	CONT0_LEFT = key;
+	CONT0_LEFT = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT0_RIGHT(KeyboardKey key)
 {
-	CONT0_RIGHT = key;
+	CONT0_RIGHT = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT0_START(KeyboardKey key)
 {
-	CONT0_START = key;
+	CONT0_START = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT0_SELECT(KeyboardKey key)
 {
-	CONT0_SELECT = key;
+	CONT0_SELECT = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT0_A(KeyboardKey key)
 {
-	CONT0_A = key;
+	CONT0_A = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT0_B(KeyboardKey key)
 {
-	CONT0_B = key;
+	CONT0_B = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT0_X(KeyboardKey key)
 {
-	CONT0_X = key;
+	CONT0_X = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT0_Y(KeyboardKey key)
 {
-	CONT0_Y = key;
+	CONT0_Y = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT0_L(KeyboardKey key)
 {
-	CONT0_L = key;
+	CONT0_L = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT0_R(KeyboardKey key)
 {
-	CONT0_R = key;
+	CONT0_R = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_UP(KeyboardKey key)
 {
-	CONT1_UP = key;
+	CONT1_UP = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_DOWN(KeyboardKey key)
 {
-	CONT1_DOWN = key;
+	CONT1_DOWN = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_LEFT(KeyboardKey key)
 {
-	CONT1_LEFT = key;
+	CONT1_LEFT = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_RIGHT(KeyboardKey key)
 {
-	CONT1_RIGHT = key;
+	CONT1_RIGHT = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_START(KeyboardKey key)
 {
-	CONT1_START = key;
+	CONT1_START = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_SELECT(KeyboardKey key)
 {
-	CONT1_SELECT = key;
+	CONT1_SELECT = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_A(KeyboardKey key)
 {
-	CONT1_A = key;
+	CONT1_A = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_B(KeyboardKey key)
 {
-	CONT1_B = key;
+	CONT1_B = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_X(KeyboardKey key)
 {
-	CONT1_X = key;
+	CONT1_X = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_Y(KeyboardKey key)
 {
-	CONT1_Y = key;
+	CONT1_Y = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_L(KeyboardKey key)
 {
-	CONT1_L = key;
+	CONT1_L = (::KeyboardKey)key;
 }
 
 void Hall::SetCONT1_R(KeyboardKey key)
 {
-	CONT1_R = key;
+	CONT1_R = (::KeyboardKey)key;
 }
 #endif
 
