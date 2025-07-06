@@ -50,7 +50,7 @@ void Hall::SetGlobalVolume(unsigned char volume)
 	::SetMasterVolume(volume_f);
 }
 
-void Hall::SetupMono(int channelID, const short* data, int sampleCount, unsigned char volume)
+void Hall::SetupMono(int channelID, const Sample* data, int sampleCount, unsigned char volume)
 {
 	::Wave wave;
 	wave.channels = 1;
@@ -67,7 +67,7 @@ void Hall::SetupMono(int channelID, const short* data, int sampleCount, unsigned
 	channels[channelID].isLooping = false;
 }
 
-void Hall::SetupMono(int channelID, const short* data, int sampleCount, unsigned int loopStart, unsigned int loopEnd, unsigned char volume)
+void Hall::SetupMono(int channelID, const Sample* data, int sampleCount, unsigned int loopStart, unsigned int loopEnd, unsigned char volume)
 {
 	if(loopStart != 0)
 		std::cout << "loopStart != 0 IS NOT SUPPORTED IN DESKTOP VERSION OF HALL" << std::endl;
@@ -91,7 +91,7 @@ void Hall::SetupMono(int channelID, const short* data, int sampleCount, unsigned
 	channels[channelID].loopEnd = loopEnd / (float)32000;
 }
 
-void Hall::SetupStereo(int channelID_left, int channelID_right, const short* data, int sampleCount, unsigned char volume)
+void Hall::SetupStereo(int channelID_left, int channelID_right, const Sample* data, int sampleCount, unsigned char volume)
 {
 	::Wave wave;
 	wave.channels = 2;
@@ -108,7 +108,7 @@ void Hall::SetupStereo(int channelID_left, int channelID_right, const short* dat
 	channels[channelID_left].isLooping = false;
 }
 
-void Hall::SetupStereo(int channelID_left, int channelID_right, const short* data, int sampleCount, unsigned int loopStart, unsigned int loopEnd, unsigned char volume)
+void Hall::SetupStereo(int channelID_left, int channelID_right, const Sample* data, int sampleCount, unsigned int loopStart, unsigned int loopEnd, unsigned char volume)
 {
 	if(loopStart != 0)
 		std::cout << "loopStart != 0 IS NOT SUPPORTED IN DESKTOP VERSION OF HALL" << std::endl;
@@ -158,7 +158,7 @@ void Hall::Pause(unsigned char channelSelect)
 	}
 }
 
-void Hall::SetData(unsigned char channelSelect, short* data)
+void Hall::SetData(unsigned char channelSelect, Sample* data)
 {
 	std::cout << "Hall::SetData IS NOT SUPPORTED IN DESKTOP VERSION OF HALL" << std::endl;
 }
