@@ -7,31 +7,31 @@ extern "C"
 #include <iostream>
 
 //Change these, if you want to change the desktop mapping of the controllers
-const ::KeyboardKey CONT0_UP 		= KEY_W;
-const ::KeyboardKey CONT0_DOWN 		= KEY_S;
-const ::KeyboardKey CONT0_LEFT 		= KEY_A;
-const ::KeyboardKey CONT0_RIGHT 	= KEY_D;
-const ::KeyboardKey CONT0_START 	= KEY_ENTER;
-const ::KeyboardKey CONT0_SELECT 	= KEY_BACKSPACE;
-const ::KeyboardKey CONT0_A 		= KEY_L;
-const ::KeyboardKey CONT0_B 		= KEY_K;
-const ::KeyboardKey CONT0_X 		= KEY_I;
-const ::KeyboardKey CONT0_Y 		= KEY_J;
-const ::KeyboardKey CONT0_L 		= KEY_U;
-const ::KeyboardKey CONT0_R 		= KEY_O;
+::KeyboardKey CONT0_UP 		= KEY_W;
+::KeyboardKey CONT0_DOWN 	= KEY_S;
+::KeyboardKey CONT0_LEFT 	= KEY_A;
+::KeyboardKey CONT0_RIGHT 	= KEY_D;
+::KeyboardKey CONT0_START 	= KEY_ENTER;
+::KeyboardKey CONT0_SELECT 	= KEY_BACKSPACE;
+::KeyboardKey CONT0_A 		= KEY_L;
+::KeyboardKey CONT0_B 		= KEY_K;
+::KeyboardKey CONT0_X 		= KEY_I;
+::KeyboardKey CONT0_Y 		= KEY_J;
+::KeyboardKey CONT0_L 		= KEY_U;
+::KeyboardKey CONT0_R 		= KEY_O;
 
-const ::KeyboardKey CONT1_UP 		= KEY_NULL;
-const ::KeyboardKey CONT1_DOWN 		= KEY_NULL;
-const ::KeyboardKey CONT1_LEFT 		= KEY_NULL;
-const ::KeyboardKey CONT1_RIGHT 	= KEY_NULL;
-const ::KeyboardKey CONT1_START 	= KEY_NULL;
-const ::KeyboardKey CONT1_SELECT 	= KEY_NULL;
-const ::KeyboardKey CONT1_A 		= KEY_NULL;
-const ::KeyboardKey CONT1_B 		= KEY_NULL;
-const ::KeyboardKey CONT1_X 		= KEY_NULL;
-const ::KeyboardKey CONT1_Y 		= KEY_NULL;
-const ::KeyboardKey CONT1_L 		= KEY_NULL;
-const ::KeyboardKey CONT1_R 		= KEY_NULL;
+::KeyboardKey CONT1_UP 		= KEY_NULL;
+::KeyboardKey CONT1_DOWN 	= KEY_NULL;
+::KeyboardKey CONT1_LEFT 	= KEY_NULL;
+::KeyboardKey CONT1_RIGHT 	= KEY_NULL;
+::KeyboardKey CONT1_START 	= KEY_NULL;
+::KeyboardKey CONT1_SELECT 	= KEY_NULL;
+::KeyboardKey CONT1_A 		= KEY_NULL;
+::KeyboardKey CONT1_B 		= KEY_NULL;
+::KeyboardKey CONT1_X 		= KEY_NULL;
+::KeyboardKey CONT1_Y 		= KEY_NULL;
+::KeyboardKey CONT1_L 		= KEY_NULL;
+::KeyboardKey CONT1_R 		= KEY_NULL;
 
 
 extern ::RenderTexture2D screen;
@@ -75,11 +75,134 @@ unsigned long long Hall::GetSystemTime()
 	return inTicks;
 }
 
+
 unsigned int Hall::GetSystemTimeExcerpt(int precision)
 {
 	std::cout << "SYSTEM TIME EXCERPT IS NOT SUPPORTED IN DESKTOP VERSION OF HALL" << std::endl;
 	return 0;
 }
+
+#ifdef DESKTOP
+void Hall::SetCONT0_UP(KeyboardKey key)
+{
+	CONT0_UP = key;
+}
+
+void Hall::SetCONT0_DOWN(KeyboardKey key)
+{
+	CONT0_DOWN = key;
+}
+
+void Hall::SetCONT0_LEFT(KeyboardKey key)
+{
+	CONT0_LEFT = key;
+}
+
+void Hall::SetCONT0_RIGHT(KeyboardKey key)
+{
+	CONT0_RIGHT = key;
+}
+
+void Hall::SetCONT0_START(KeyboardKey key)
+{
+	CONT0_START = key;
+}
+
+void Hall::SetCONT0_SELECT(KeyboardKey key)
+{
+	CONT0_SELECT = key;
+}
+
+void Hall::SetCONT0_A(KeyboardKey key)
+{
+	CONT0_A = key;
+}
+
+void Hall::SetCONT0_B(KeyboardKey key)
+{
+	CONT0_B = key;
+}
+
+void Hall::SetCONT0_X(KeyboardKey key)
+{
+	CONT0_X = key;
+}
+
+void Hall::SetCONT0_Y(KeyboardKey key)
+{
+	CONT0_Y = key;
+}
+
+void Hall::SetCONT0_L(KeyboardKey key)
+{
+	CONT0_L = key;
+}
+
+void Hall::SetCONT0_R(KeyboardKey key)
+{
+	CONT0_R = key;
+}
+
+void Hall::SetCONT1_UP(KeyboardKey key)
+{
+	CONT1_UP = key;
+}
+
+void Hall::SetCONT1_DOWN(KeyboardKey key)
+{
+	CONT1_DOWN = key;
+}
+
+void Hall::SetCONT1_LEFT(KeyboardKey key)
+{
+	CONT1_LEFT = key;
+}
+
+void Hall::SetCONT1_RIGHT(KeyboardKey key)
+{
+	CONT1_RIGHT = key;
+}
+
+void Hall::SetCONT1_START(KeyboardKey key)
+{
+	CONT1_START = key;
+}
+
+void Hall::SetCONT1_SELECT(KeyboardKey key)
+{
+	CONT1_SELECT = key;
+}
+
+void Hall::SetCONT1_A(KeyboardKey key)
+{
+	CONT1_A = key;
+}
+
+void Hall::SetCONT1_B(KeyboardKey key)
+{
+	CONT1_B = key;
+}
+
+void Hall::SetCONT1_X(KeyboardKey key)
+{
+	CONT1_X = key;
+}
+
+void Hall::SetCONT1_Y(KeyboardKey key)
+{
+	CONT1_Y = key;
+}
+
+void Hall::SetCONT1_L(KeyboardKey key)
+{
+	CONT1_L = key;
+}
+
+void Hall::SetCONT1_R(KeyboardKey key)
+{
+	CONT1_R = key;
+}
+#endif
 
 Hall::ControllerState Hall::GetController(int id)
 {

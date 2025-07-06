@@ -2,6 +2,8 @@
 
 namespace Hall
 {
+	/// @brief This is a typedef of raylibs KeyboardKey enums
+	typedef ::KeyboardKey KeyboardKey;
 	typedef unsigned short ControllerState;
 	static const int SYSTEM_CLK_FREQUENCY = 50000000; //50 MHz
 	static void* const SDRAM_START = 0x0; //Start of the RAM. It is 32 MB large
@@ -24,6 +26,34 @@ namespace Hall
 	/// </summary>
 	/// <returns>The system time since boot-up in ticks</returns>
 	unsigned long long GetSystemTime();
+	unsigned int GetSystemTimeExcerpt(int precision);
+
+#ifdef DESKTOP
+	void SetCONT0_UP(KeyboardKey key);
+	void SetCONT0_DOWN(KeyboardKey key);
+	void SetCONT0_LEFT(KeyboardKey key);
+	void SetCONT0_RIGHT(KeyboardKey key);
+	void SetCONT0_START(KeyboardKey key);
+	void SetCONT0_SELECT(KeyboardKey key);
+	void SetCONT0_A(KeyboardKey key);
+	void SetCONT0_B(KeyboardKey key);
+	void SetCONT0_X(KeyboardKey key);
+	void SetCONT0_Y(KeyboardKey key);
+	void SetCONT0_L(KeyboardKey key);
+	void SetCONT0_R(KeyboardKey key);
+	void SetCONT1_UP(KeyboardKey key);
+	void SetCONT1_DOWN(KeyboardKey key);
+	void SetCONT1_LEFT(KeyboardKey key);
+	void SetCONT1_RIGHT(KeyboardKey key);
+	void SetCONT1_START(KeyboardKey key);
+	void SetCONT1_SELECT(KeyboardKey key);
+	void SetCONT1_A(KeyboardKey key);
+	void SetCONT1_B(KeyboardKey key);
+	void SetCONT1_X(KeyboardKey key);
+	void SetCONT1_Y(KeyboardKey key);
+	void SetCONT1_L(KeyboardKey key);
+	void SetCONT1_R(KeyboardKey key);
+#endif
 
 	/// <summary>
 	/// Returns the state of all buttons on the controller.
@@ -32,7 +62,6 @@ namespace Hall
 	/// <returns>Each button corresponds to one bit: 0 - B, 1 - Y, 2 - Select, 3 - Start, 4 - Up, 5 - Down, 6 - Left, 7 - Right, 8 - A, 9 - X, 10 - L, 11 - R</returns>
 	ControllerState GetController(int id);
 
-	unsigned int GetSystemTimeExcerpt(int precision);
 	bool GetA(ControllerState controller);
 	bool GetB(ControllerState controller);
 	bool GetX(ControllerState controller);
