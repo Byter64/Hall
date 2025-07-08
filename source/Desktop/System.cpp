@@ -37,8 +37,12 @@ extern "C"
 extern ::RenderTexture2D screen;
 extern ::Camera2D camera;
 
+extern bool startPlayingOnFrame[8];
+
 void Hall::Init()
 {
+	for (int i = 0; i < 8; i++) startPlayingOnFrame[i] = false;
+
 	::SetConfigFlags(FLAG_WINDOW_RESIZABLE);
 	::InitWindow(800, 480, "wueHans Desktop Simulatior 2025");
 	screen = ::LoadRenderTexture(SCREEN_WIDTH, SCREEN_HEIGHT);

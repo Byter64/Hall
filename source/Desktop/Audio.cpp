@@ -12,18 +12,26 @@ struct Channel
 {
 	::Sound sound;
 	bool isLooping;
-	double currentPosition;
-	double loopStart;
-	double loopEnd;
+	float currentPosition;
+	float loopStart;
+	float loopEnd;
 };
 
-::Channel channels[8];
+Channel channels[8];
+bool startPlayingOnFrame[8];
 
 void _UpdateAudio(float frameTime)
 {
-	//This implements looping :/
+	//This implements looping audio :/
 	for(int i = 0; i < 8; i++)
 	{
+		if (startPlayingOnFrame[i])
+		{
+			channels[i].currentPosition = 0;
+			::PlaySound(channels[i].sound);
+			startPlayingOnFrame[i] = false;
+		}
+
 		Channel& channel = channels[i];
 		if(::IsSoundPlaying(channel.sound))
 		{
@@ -139,8 +147,20 @@ void Hall::Play(unsigned char channelSelect)
 		bool select = (channelSelect >> i) & 1;
 		if(select)
 		{
-			::PlaySound(channels[i].sound);
-			channels[i].currentPosition = 0;
+			//If audio is longer than 5 secs, only preload the audio and play it on the text frame
+			if (channels[i].sound.frameCount >= 5 * 32000)
+			{
+				//Loading sounds takes time so we only load them here
+				//Audio starts in sync with the frame
+				::PlaySound(channels[i].sound);
+				::PauseSound(channels[i].sound);
+				startPlayingOnFrame[i] = true;
+			}
+			else
+			{
+				::PlaySound(channels[i].sound);
+				channels[i].currentPosition = 0;
+			}
 		}
 	}
 }
