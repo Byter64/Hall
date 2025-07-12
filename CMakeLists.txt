@@ -53,7 +53,8 @@ else()
 	  PRIVATE -nostdlib
 	  PRIVATE -fno-unwind-tables
 	  PRIVATE -fno-rtti
-	  PRIVATE -march=rv32im
+	  PRIVATE -march=rv32imf
+    PRIVATE -mabi=ilp32f
 	  PRIVATE -Os
 	  PRIVATE -Bstatic
 	  PRIVATE -nostdinc
