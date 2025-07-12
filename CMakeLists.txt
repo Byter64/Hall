@@ -55,7 +55,7 @@ else()
 	  PRIVATE -fno-rtti
 	  PRIVATE -march=rv32imf
     PRIVATE -mabi=ilp32f
-	  PRIVATE -Os
+	  PRIVATE -O3
 	  PRIVATE -Bstatic
 	  PRIVATE -nostdinc
 	)
