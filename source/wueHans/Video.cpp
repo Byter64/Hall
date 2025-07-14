@@ -114,15 +114,13 @@ void Hall::Draw()
 void Hall::Draw(const unsigned short* data, unsigned short xOffset, unsigned short yOffset, unsigned short screenX, unsigned short screenY, unsigned short width, unsigned short height, unsigned short dataWidth)
 {
 	SetColorSource(Hall::MEMORY);
-	*GPU_IMAGE_START = data;
-	*GPU_IMAGE_X = xOffset;
-	*GPU_IMAGE_Y= yOffset;
-	*GPU_IMAGE_WIDTH = dataWidth;
-	*GPU_EXCERPT_WIDTH = width;
-	*GPU_EXCERPT_HEIGHT = height;
-	*GPU_SCREEN_X = screenX;
-	*GPU_SCREEN_Y = screenY;
-	*GPU_COMMAND_DRAW = true;
+	SetImage((Hall::Color*)data, dataWidth, 480);
+	SetExcerpt(xOffset, yOffset, width, height);
+	SetScale(1, 1);
+	SetFlip(false, false);	
+	SetScreenPosition(screenX, screenY);
+	SetColorSource(Hall::MEMORY);
+	Draw();
 }
 
 
