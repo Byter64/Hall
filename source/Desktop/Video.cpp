@@ -319,6 +319,7 @@ void Hall::Draw(const unsigned short* data, unsigned short xOffset, unsigned sho
 	IMAGE_SCALE_X = 1;
 	IMAGE_SCALE_Y = 1;
 	IMAGE_WIDTH = dataWidth;
+	IMAGE_HEIGHT = 480;
 	EXCERPT_WIDTH = width;
 	EXCERPT_HEIGHT = height;
 	SCREEN_X = screenX;
